@@ -31,8 +31,10 @@ const PeopleAxios = () => {
     axios
       .post("https://jsonplaceholder.typicode.com/users", {
         veri,
+        //! üst taraf database yeniler
       })
       .then((res) => setInsanlar([...insanlar, res.data.veri]));
+      //!üst taraf buradaki insanlar dizisini yeniler
   };
 //* [...insanlar, res.data.veri] insanlar dizisinin parantezini aç, yeni veriyi ekle parantezi kapat
   //! ilk boş insanlar dizisi oluşur, sonra veri oluşur sonra return (tabi boş olduğu için ekran görünmez), axios tan veri gelince insanlar dolar ve return tekrar verilerle basılır
